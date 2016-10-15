@@ -38,5 +38,9 @@ public class LoginPanel extends JPanel {
             add(newUser);
            
         }
+        
+        private void submitActionPerformed(java.awt.event.ActionEvent evt) {
+            
+        }
 
 }

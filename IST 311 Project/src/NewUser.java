@@ -198,6 +198,10 @@ public class NewUser extends javax.swing.JFrame {
 
     private void CreateUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateUsernameActionPerformed
         // TODO add your handling code here:
+        Database newDb = new Database(FirstName.getText(), LastName.getText(), Username.getText(),
+            UsernamePassword.getText(), jTextField1.getText(), SecurityAnswer.getText());
+        app.setDatabase(newDb);
+        this.setVisible(false);
     }//GEN-LAST:event_CreateUsernameActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -208,10 +212,8 @@ public class NewUser extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_SecurityAnswerActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
+   
+    public static void runApp() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
